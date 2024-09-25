@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Hello World';
+  public counter: number = 10;
+
+  public incrementCounterBy(incrementFactor: number): void {
+    this.counter += incrementFactor;
+  }
+
+  public decrementCounterBy(decrementFactor: number): void {
+    this.counter += decrementFactor;
+  }
+
+  public resetCounter(): void {
+    this.counter = 10;
+  }
 }
